@@ -1,0 +1,11 @@
+body {
+  background-color: #000000;
+  color: #ffffff;
+}
+body {
+  cursor: url('/batman-logo.svg') 16 16, auto;
+}
+
+a, button {
+  cursor: url('/batman-logo.svg') 16 16, pointer;
+}
