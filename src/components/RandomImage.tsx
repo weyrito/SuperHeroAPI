@@ -27,7 +27,7 @@ export default function RandomImage() {
       }, 2000);
     };
 
-    const interval = setInterval(showImage, 1000);
+    const interval = setInterval(showImage, 15000);
     return () => clearInterval(interval);
   }, [images.length]);
 

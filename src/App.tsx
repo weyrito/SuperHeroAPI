@@ -11,6 +11,7 @@ import Contact from './pages/Contact';
 import Login from './pages/Login';
 import NotFound from './pages/NotFound';
 import RandomImage from './components/RandomImage';
+import Loader from './components/Loader';
 import './App.css';
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
   }, []);
 
   if (isLoading) {
-    // return <Loader />;
+    return <Loader />;
   }
 
   return (
