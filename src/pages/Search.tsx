@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { searchHeroes, getAllHeroes, getHeroById } from '../API/FetchSuperHero';
 import type { Hero } from '../API/FetchSuperHero';
 import SearchBar from '../components/SearchBar';
-import HeroCard from '../components/HeroCard';
+import HeroCard from '../components/Hero';
 import { motion } from 'framer-motion';
 
 const Search = () => {

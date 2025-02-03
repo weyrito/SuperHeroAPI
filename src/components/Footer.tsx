@@ -1,5 +1,4 @@
-import { Box, Container, Flex, Link, Text } from '@chakra-ui/react'
-import { motion } from 'framer-motion'
+import { Box, Container, Flex, Text } from '@chakra-ui/react'
 
 export default function Footer() {
   return (
@@ -21,44 +20,10 @@ export default function Footer() {
             fontSize="sm"
             textShadow="0 0 10px rgba(255, 255, 255, 0.3)"
           >
-            © {new Date().getFullYear()} SuperHero Database. Tous droits réservés.
+            © {new Date().getFullYear()} BATMAN. Tous Bat-droits de Gotham réservés.
           </Text>
           
-          <Flex gap={6}>
-            <motion.div whileHover={{ filter: 'brightness(1.2)' }}>
-              <Link
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                fontWeight="500"
-                _hover={{ 
-                  color: "#64b5f6", 
-                  textShadow: "0 0 12px #64b5f6",
-                  textDecoration: "none"
-                }}
-                transition="all 0.3s ease"
-              >
-                GITHUB
-              </Link>
-            </motion.div>
-
-            <motion.div whileHover={{ filter: 'brightness(1.2)' }}>
-              <Link
-                href="https://superheroapi.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                fontWeight="500"
-                _hover={{ 
-                  color: "#64b5f6", 
-                  textShadow: "0 0 12px #64b5f6",
-                  textDecoration: "none"
-                }}
-                transition="all 0.3s ease"
-              >
-                API
-              </Link>
-            </motion.div>
-          </Flex>
+          
         </Flex>
       </Container>
     </Box>

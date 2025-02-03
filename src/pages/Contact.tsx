@@ -26,14 +26,16 @@ export default function Contact() {
 
     return (
         <div className="container mx-auto px-4 py-8 max-w-2xl">
-            <h1 className="text-3xl font-bold text-center mb-8">Contact</h1>
+            <h1 className="text-4xl font-batman text-yellow-500 text-center mb-8 shadow-[0_0_30px_rgba(255,215,0,0.3)]">
+                Bat-Contact
+            </h1>
             
             {!submitted ? (
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6 bg-black/50 p-8 rounded-lg border-2 border-yellow-500 shadow-[0_0_30px_rgba(255,215,0,0.2)]">
                     <div className="grid grid-cols-2 gap-4">
                         <div>
-                            <label htmlFor="firstName" className="block text-sm font-medium mb-1">
-                                Prénom
+                            <label htmlFor="firstName" className="block text-sm font-batman text-yellow-500 mb-1">
+                                Bat-Prénom
                             </label>
                             <input
                                 type="text"
@@ -42,12 +44,12 @@ export default function Contact() {
                                 value={formData.firstName}
                                 onChange={handleChange}
                                 required
-                                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="w-full px-4 py-2 bg-black/70 text-yellow-500 border-2 border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent placeholder-yellow-500/50"
                             />
                         </div>
                         <div>
-                            <label htmlFor="lastName" className="block text-sm font-medium mb-1">
-                                Nom
+                            <label htmlFor="lastName" className="block text-sm font-batman text-yellow-500 mb-1">
+                                Bat-Nom
                             </label>
                             <input
                                 type="text"
@@ -56,14 +58,14 @@ export default function Contact() {
                                 value={formData.lastName}
                                 onChange={handleChange}
                                 required
-                                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="w-full px-4 py-2 bg-black/70 text-yellow-500 border-2 border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent placeholder-yellow-500/50"
                             />
                         </div>
                     </div>
 
                     <div>
-                        <label htmlFor="email" className="block text-sm font-medium mb-1">
-                            Email
+                        <label htmlFor="email" className="block text-sm font-batman text-yellow-500 mb-1">
+                            Bat-Email
                         </label>
                         <input
                             type="email"
@@ -72,13 +74,13 @@ export default function Contact() {
                             value={formData.email}
                             onChange={handleChange}
                             required
-                            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full px-4 py-2 bg-black/70 text-yellow-500 border-2 border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent placeholder-yellow-500/50"
                         />
                     </div>
 
                     <div>
-                        <label htmlFor="message" className="block text-sm font-medium mb-1">
-                            Message
+                        <label htmlFor="message" className="block text-sm font-batman text-yellow-500 mb-1">
+                            Bat-Message
                         </label>
                         <textarea
                             id="message"
@@ -87,24 +89,24 @@ export default function Contact() {
                             onChange={handleChange}
                             required
                             rows={5}
-                            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full px-4 py-2 bg-black/70 text-yellow-500 border-2 border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent placeholder-yellow-500/50"
                         />
                     </div>
 
                     <button
                         type="submit"
-                        className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors"
+                        className="w-full bg-yellow-500 text-black font-batman py-2 px-4 rounded-lg hover:bg-black hover:text-yellow-500 hover:shadow-[0_0_20px_rgba(255,215,0,0.5)] border-2 border-yellow-500 transition-all duration-300"
                     >
-                        Envoyer
+                        Envoyer le Bat-Message
                     </button>
                 </form>
             ) : (
-                <div className="text-center p-8 bg-green-50 rounded-lg">
-                    <h2 className="text-2xl font-semibold text-green-600 mb-4">
+                <div className="text-center p-8 bg-black/50 rounded-lg border-2 border-yellow-500 shadow-[0_0_30px_rgba(255,215,0,0.3)]">
+                    <h2 className="text-2xl font-batman text-yellow-500 mb-4">
                         Merci {formData.firstName} {formData.lastName} !
                     </h2>
-                    <p className="text-gray-600">
-                        Votre message a été envoyé avec succès. Nous vous répondrons bientôt à l'adresse {formData.email}.
+                    <p className="text-yellow-500 font-batman">
+                        Votre Bat-message a été envoyé avec succès. Nous vous répondrons bientôt à l'adresse {formData.email}.
                     </p>
                 </div>
             )}

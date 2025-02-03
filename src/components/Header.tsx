@@ -9,10 +9,10 @@ export default function Header() {
 
   const NavLinks = () => (
     <>
-      <motion.div whileHover={{ filter: 'brightness(1.2)' }}>
+      <motion.div whileHover={{ scale: 1.1, filter: 'brightness(1.2)' }}>
         <RouterLink
           to="/"
-          className="text-white font-medium hover:text-[#64b5f6] transition-all duration-300 hover:shadow-[0_0_12px_#64b5f6]"
+          className="text-yellow-500 font-medium hover:text-white transition-all duration-300 hover:shadow-[0_0_12px_#ffd700]"
         >
           ACCUEIL
         </RouterLink>
@@ -49,12 +49,12 @@ export default function Header() {
         </>
       ) : (
         <motion.div
-          whileHover={{ filter: 'brightness(1.2)' }}
+          whileHover={{ scale: 1.1, filter: 'brightness(1.2)' }}
           whileTap={{ scale: 0.95 }}
         >
           <RouterLink
             to="/login"
-            className="bg-[#e53935] text-white px-4 py-2 rounded hover:bg-[#ef5350] hover:shadow-[0_0_20px_#e53935] transition-all duration-300"
+            className="bg-black text-yellow-500 border-2 border-yellow-500 px-4 py-2 rounded hover:bg-yellow-500 hover:text-black hover:shadow-[0_0_20px_#ffd700] transition-all duration-300"
           >
             CONNEXION
           </RouterLink>
@@ -64,19 +64,22 @@ export default function Header() {
   )
 
   return (
-    <header className="bg-gradient-to-r from-[#1a1a1a] via-[#e53935] to-[#1a1a1a] shadow-[0_4px_20px_rgba(229,57,53,0.4)] sticky top-0 z-50">
+    <header className="bg-gradient-to-r from-black via-[#1a1a1a] to-black shadow-[0_4px_20px_rgba(255,255,0,0.2)] sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <motion.div
-            whileHover={{ filter: 'brightness(1.2)' }}
+            whileHover={{ 
+              filter: 'brightness(1.2)',
+              scale: 1.05
+            }}
             transition={{ duration: 0.2 }}
           >
             <RouterLink to="/" className="no-underline">
-              <span className="text-xl md:text-2xl font-black text-white shadow-[0_0_15px_#ff0000] tracking-wider flex items-center">
-                <span className="text-[#64b5f6] mr-2 shadow-[0_0_10px_#64b5f6]">
-                  ⎊
+              <span className="text-xl md:text-2xl font-black text-white tracking-wider flex items-center">
+                <span className="text-yellow-500 mr-2 shadow-[0_0_15px_#ffd700]">
+                  🦇
                 </span>
-                BATMAN
+                <span className="font-batman">BATMAN</span>
               </span>
             </RouterLink>
           </motion.div>

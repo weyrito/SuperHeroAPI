@@ -1,7 +1,31 @@
+/* Reset du curseur et styles de base */
+*{
+  font-family: 'BatmanForeverAlternate' !important;
+}
+
 body {
   cursor: url('/batman-logo.svg') 16 16, auto;
+  background-color: #1a1a1a;
+  color: #ffffff;
 }
 
 a, button {
   cursor: url('/batman-logo.svg') 16 16, pointer;
+}
+
+/* Style du texte de base */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Batman Forever', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+/* Style des boutons et liens */
+button, a {
+  font-family: 'Batman Forever', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+/* Style des inputs */
+input, textarea {
+  font-family: 'Batman Forever', sans-serif;
 }
